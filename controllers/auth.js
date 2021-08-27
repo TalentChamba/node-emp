@@ -110,15 +110,11 @@ exports.isLoggedIn = async (req, res, next) => {
         if(!result) {
           return next();
         }
-
         req.user = result[0];
-        console.log("user is")
-        console.log(req.user);
         return next();
 
       });
     } catch (error) {
-      console.log(error);
       return next();
     }
   } else {
@@ -131,26 +127,13 @@ exports.logout = async (req, res) => {
     expires: new Date(Date.now() + 2*1000),
     httpOnly: true
   });
-
   res.status(200).redirect('/login');
 }
 
 
 
 exports.employee = (req, res) => {
-  console.log(req.body);
-
-  const { name, email } = req.body;
-
   db.query('SELECT * FROM employee_login', async (error, results) => {
-    // if(error) {
-    //   console.log(error);
-    // } else{
-     
-    //   const test = results.render('employee',{ name, email});
-    //   console.log(test);
-    // }
-
   if (!error){
    let test = res.render('employee', {user: results});
    console.log(test, "test");
@@ -158,7 +141,18 @@ exports.employee = (req, res) => {
   else {
   console.log(err);
   }
-
   });
 
 }
+
+// // Update User Details
+// exports.update = (req, res) => {
+//   const { name, email} = req.body;
+//   const getID = req.params.id;
+//   var sql = `UPDATE employee_login SET name="${name}", email="${email}" WHERE id= '${getID}' ?`;
+//   db.query(sql, function(err, result) {
+//     if (err) throw err;
+//     console.log('record updated!');
+//     res.redirect('/profile');
+//   });
+// }

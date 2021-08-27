@@ -11,5 +11,7 @@ router.get('/logout', authController.logout );
 
 router.get('/employee', authController.employee );
 
+// router.post('/update', authController.update );
+
 
 module.exports = router;

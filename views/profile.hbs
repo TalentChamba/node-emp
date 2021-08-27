@@ -5,188 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="/style.css">
-  <title>Document</title>
+  <title>Profile</title>
 </head>
-{{!-- <body>
-  <nav>
-    <h4>Node MySQL</h4>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/profile">Profile</a></li>
-      <li><a href="/auth/logout">Logout</a></li>
-    </ul>
-  </nav>
-
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <div class="avatar-ctn">
-            <img src="/avatar.png" class="avatar" alt="user profile picture"/>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{user.name}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">{{user.email}}</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-8">
-        <div class="card text-center">
-          <div class="card-header">
-            Profile Page
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Hey {{user.name}} welcome back</h5>
-            <p class="card-text">This is your profile page where you can add all the information about yourself</p>
-            <a href="#" class="btn btn-primary">Go Somewhere</a>
-          </div>
-          <div class="card-footer text-muted">
-            Node MySQL - Project
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
-  </div> --}}
 
   <body>
-    <div class="container">
-<div id="content" class="content p-0">
-    <div class="profile-header">
-        <div class="profile-header-cover"></div>
-        <div class="profile-header-content">
-            <div class="profile-header-img mb-4">
-                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="mb-4" alt="" />
-            </div>
-
-            <div class="profile-header-info">
-                <h4 class="m-t-sm">Hey {{user.name}}, welcome back</h4>
-
-                <a href="#" class="btn btn-xs btn-primary mb-2">Edit Profile</a>
-            </div>
-        </div>
-
-        <ul class="profile-header-tab nav nav-tabs">
-            <li class="nav-item"><a href="/employee" class="nav-link" data-toggle="tab">Employee(s)</a></li>
-            <li class="nav-item" ><a class="nav-link" data-toggle="tab" href="/auth/logout">Logout</a></li>
-        </ul>
-    </div>
-
-    <div class="profile-container">
-        <div class="row row-space-20">
-            <div class="col-md-8">
-                <div class="tab-content p-0">
-
-                    <div class="tab-pane fade active show" id="profile-friends">
-                        <div class="m-b-10"><b>Friend List (9)</b></div>
-
-                        <ul class="friend-list clearfix">
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Sancho Aldo</h4>
-                                        <p>392 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Jonty Augusto</h4>
-                                        <p>128 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Androkles Allen</h4>
-                                        <p>12 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Ithamar Silvio</h4>
-                                        <p>1,923 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Denzel Annas</h4>
-                                        <p>893 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Kamil Cree</h4>
-                                        <p>983 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Fritjof Inderjit</h4>
-                                        <p>3,321 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Sushil Trygve</h4>
-                                        <p>921 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="friend-img"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" /></div>
-                                    <div class="friend-info">
-                                        <h4>Frans Gebhard</h4>
-                                        <p>944 friends</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Employee Dash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/employee">List of Employees</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/auth/logout">Logout</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav> <br />
 
-            <div class="col-md-4 hidden-xs hidden-sm">
-                <ul class="profile-info-list">
-                    <li class="title">PERSONAL INFORMATION</li>
-                    <li>
-                        <div class="field">Email Address:</div>
-                        <div class="value">{{user.email}}</div>
-                    </li>
-                    <li>
-                        <div class="field">Occupation:</div>
-                        <div class="value">UXUI / Frontend Developer</div>
-                    </li>
-                    
-                </ul>
+
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title mb-4">
+                            <div class="d-flex justify-content-start">
+                                <div class="image-container">
+                                    <img src="{{user.name}}" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+                                    <div class="middle">
+                                       	 <form action='/post' method="POST" enctype="multipart/form-data">
+     <input type="file" name="image" style="width:300px; border: 1px solid #ccc;">
+     <button type="submit" style="width:60px; height:25px; border: 0; background-   color: red; color: white;border-radius: 2px;">Upload</button>
+                                    </div>
+                                </div>
+                                <div class="userData ml-3">
+                                    <h1 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">{{user.name}}</a></h1>
+                                </div>
+                                <div class="ml-auto">
+                                    <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Full Name</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{user.name}}
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Email</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{user.email}}
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Something</label>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+
+
+
 </div>
   </body>
 
